@@ -73,124 +73,124 @@ namespace RegraNegocio.ModuloBasico
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Foto> fotoes
+        public ObjectSet<Foto> Foto
         {
             get
             {
-                if ((_fotoes == null))
+                if ((_Foto == null))
                 {
-                    _fotoes = base.CreateObjectSet<Foto>("fotoes");
+                    _Foto = base.CreateObjectSet<Foto>("Foto");
                 }
-                return _fotoes;
+                return _Foto;
             }
         }
-        private ObjectSet<Foto> _fotoes;
+        private ObjectSet<Foto> _Foto;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Galeria> galerias
+        public ObjectSet<Galeria> Galeria
         {
             get
             {
-                if ((_galerias == null))
+                if ((_Galeria == null))
                 {
-                    _galerias = base.CreateObjectSet<Galeria>("galerias");
+                    _Galeria = base.CreateObjectSet<Galeria>("Galeria");
                 }
-                return _galerias;
+                return _Galeria;
             }
         }
-        private ObjectSet<Galeria> _galerias;
+        private ObjectSet<Galeria> _Galeria;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Index> indices
+        public ObjectSet<Index> Index
         {
             get
             {
-                if ((_indices == null))
+                if ((_Index == null))
                 {
-                    _indices = base.CreateObjectSet<Index>("indices");
+                    _Index = base.CreateObjectSet<Index>("Index");
                 }
-                return _indices;
+                return _Index;
             }
         }
-        private ObjectSet<Index> _indices;
+        private ObjectSet<Index> _Index;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Proposta> propostas
+        public ObjectSet<Proposta> Proposta
         {
             get
             {
-                if ((_propostas == null))
+                if ((_Proposta == null))
                 {
-                    _propostas = base.CreateObjectSet<Proposta>("propostas");
+                    _Proposta = base.CreateObjectSet<Proposta>("Proposta");
                 }
-                return _propostas;
+                return _Proposta;
             }
         }
-        private ObjectSet<Proposta> _propostas;
+        private ObjectSet<Proposta> _Proposta;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Usuario> usuarios
+        public ObjectSet<Usuario> Usuario
         {
             get
             {
-                if ((_usuarios == null))
+                if ((_Usuario == null))
                 {
-                    _usuarios = base.CreateObjectSet<Usuario>("usuarios");
+                    _Usuario = base.CreateObjectSet<Usuario>("Usuario");
                 }
-                return _usuarios;
+                return _Usuario;
             }
         }
-        private ObjectSet<Usuario> _usuarios;
+        private ObjectSet<Usuario> _Usuario;
 
         #endregion
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the fotoes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Foto EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTofotoes(Foto foto)
+        public void AddToFoto(Foto foto)
         {
-            base.AddObject("fotoes", foto);
+            base.AddObject("Foto", foto);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the galerias EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Galeria EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTogalerias(Galeria galeria)
+        public void AddToGaleria(Galeria galeria)
         {
-            base.AddObject("galerias", galeria);
+            base.AddObject("Galeria", galeria);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the indices EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Index EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToindices(Index index)
+        public void AddToIndex(Index index)
         {
-            base.AddObject("indices", index);
+            base.AddObject("Index", index);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the propostas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Proposta EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTopropostas(Proposta proposta)
+        public void AddToProposta(Proposta proposta)
         {
-            base.AddObject("propostas", proposta);
+            base.AddObject("Proposta", proposta);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the usuarios EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Usuario EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTousuarios(Usuario usuario)
+        public void AddToUsuario(Usuario usuario)
         {
-            base.AddObject("usuarios", usuario);
+            base.AddObject("Usuario", usuario);
         }
 
         #endregion
@@ -529,7 +529,7 @@ namespace RegraNegocio.ModuloBasico
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FredDaCaixaModel", "fk_Foto_Galeria", "foto")]
-        public EntityCollection<Foto> fotoes
+        public EntityCollection<Foto> foto
         {
             get
             {

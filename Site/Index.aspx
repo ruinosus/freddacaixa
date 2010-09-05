@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="Index.aspx.cs" Inherits="Index" %>
 
-<%@ Register Assembly="Infragistics35.Web.v10.1, Version=10.1.20101.1011, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb"
-    Namespace="Infragistics.Web.UI.ListControls" TagPrefix="ig" %>
+
+<%@ Register assembly="Infragistics4.Web.v10.2, Version=10.2.20102.1011, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" namespace="Infragistics.Web.UI.ListControls" tagprefix="ig" %>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="intro">
         <div class="pad">
@@ -31,14 +33,9 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+        <ig:WebImageViewer ID="WebImageViewer1" runat="server" Height="150px" 
+            Width="500px">
+        </ig:WebImageViewer>
     </div>
-    <ig:WebImageViewer ID="WebImageViewer1" runat="server" Width="650px" Height="150px">
-<PreviousButton AltText="Previous Button"></PreviousButton>
-
-        <Header Visible="true" Text="Imagens">
-        </Header>
-
-<NextButton AltText="Next Button"></NextButton>
-    </ig:WebImageViewer>
-    
+        
 </asp:Content>

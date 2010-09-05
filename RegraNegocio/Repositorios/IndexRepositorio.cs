@@ -20,7 +20,7 @@ namespace Repositorios
 
         public void Incluir(Index index)
         {
-            db.AddToindices(index);
+            db.AddToIndex(index);
         }
 
         public void Excluir(Index index)
@@ -143,7 +143,7 @@ namespace Repositorios
 
         public List<Index> Consultar()
         {
-            return db.indices.ToList();
+            return db.Index.ToList();
         }
 
         public void Confirmar()

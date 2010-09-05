@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="FredDaCaixaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="FredDaCaixaModelStoreContainer">
-    <EntitySet Name="foto" EntityType="FredDaCaixaModel.Store.foto" store:Type="Tables" Schema="freddacaixa" />
-    <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="freddacaixa" />
-    <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="freddacaixa" />
-    <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="freddacaixa" />
-    <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="freddacaixa" />
+    <EntitySet Name="foto" EntityType="FredDaCaixaModel.Store.foto" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="thecase" />
     <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
       <End Role="galeria" EntitySet="galeria" />
       <End Role="foto" EntitySet="foto" />

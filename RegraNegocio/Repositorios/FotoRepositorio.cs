@@ -20,7 +20,7 @@ namespace Repositorios
 
         public void Incluir(Foto foto)
         {
-            db.AddTofotoes(foto);
+            db.AddToFoto(foto);
         }
 
         public void Excluir(Foto foto)
@@ -122,7 +122,7 @@ namespace Repositorios
 
         public List<Foto> Consultar()
         {
-            return db.fotoes.ToList();
+            return db.Foto.ToList();
         }
 
         public void Confirmar()

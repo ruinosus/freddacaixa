@@ -20,7 +20,7 @@ namespace Repositorios
 
         public void Incluir(Usuario usuario)
         {
-            db.AddTousuarios(usuario);
+            db.AddToUsuario(usuario);
         }
 
         public void Excluir(Usuario usuario)
@@ -158,7 +158,7 @@ namespace Repositorios
 
         public List<Usuario> Consultar()
         {
-            return db.usuarios.ToList();
+            return db.Usuario.ToList();
         }
 
         public void Confirmar()

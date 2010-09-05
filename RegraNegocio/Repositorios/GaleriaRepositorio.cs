@@ -20,7 +20,7 @@ namespace Repositorios
 
         public void Incluir(Galeria galeria)
         {
-            db.AddTogalerias(galeria);
+            db.AddToGaleria(galeria);
         }
 
         public void Excluir(Galeria galeria)
@@ -122,12 +122,12 @@ namespace Repositorios
 
         public List<Galeria> Consultar()
         {
-            return db.galerias.ToList();
+            return db.Galeria.ToList();
         }
 
         public void Confirmar()
         {
-            db.SaveChanges(true);
+            db.SaveChanges();
         }
 
         #endregion
