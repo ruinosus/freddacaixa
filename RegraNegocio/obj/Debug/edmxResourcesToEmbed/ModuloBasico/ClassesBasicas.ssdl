@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FredDaCaixaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FredDaCaixaModelStoreContainer">
+    <EntitySet Name="foto" EntityType="FredDaCaixaModel.Store.foto" store:Type="Tables" Schema="freddacaixa" />
+    <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="freddacaixa" />
+    <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="freddacaixa" />
+    <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="freddacaixa" />
+    <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="freddacaixa" />
+    <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
+      <End Role="galeria" EntitySet="galeria" />
+      <End Role="foto" EntitySet="foto" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="foto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="GaleriaID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImagemUrl" Type="varchar" MaxLength="8000" />
+    <Property Name="Legenda" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="galeria">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImagemUrl" Type="varchar" MaxLength="8000" />
+    <Property Name="Legenda" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="index">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="proposta">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Association Name="fk_Foto_Galeria">
+    <End Role="galeria" Type="FredDaCaixaModel.Store.galeria" Multiplicity="1" />
+    <End Role="foto" Type="FredDaCaixaModel.Store.foto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="galeria">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="foto">
+        <PropertyRef Name="GaleriaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

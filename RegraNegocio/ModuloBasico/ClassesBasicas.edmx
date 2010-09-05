@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FredDaCaixaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FredDaCaixaModelStoreContainer">
+          <EntitySet Name="foto" EntityType="FredDaCaixaModel.Store.foto" store:Type="Tables" Schema="freddacaixa" />
+          <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="freddacaixa" />
+          <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="freddacaixa" />
+          <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="freddacaixa" />
+          <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="freddacaixa" />
+          <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
+            <End Role="galeria" EntitySet="galeria" />
+            <End Role="foto" EntitySet="foto" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="foto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="GaleriaID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ImagemUrl" Type="varchar" MaxLength="8000" />
+          <Property Name="Legenda" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="galeria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ImagemUrl" Type="varchar" MaxLength="8000" />
+          <Property Name="Legenda" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="index">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="proposta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <Association Name="fk_Foto_Galeria">
+          <End Role="galeria" Type="FredDaCaixaModel.Store.galeria" Multiplicity="1" />
+          <End Role="foto" Type="FredDaCaixaModel.Store.foto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="galeria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="foto">
+              <PropertyRef Name="GaleriaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FredDaCaixaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FredDaCaixaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="fotoes" EntityType="FredDaCaixaModel.Foto" />
+          <EntitySet Name="galerias" EntityType="FredDaCaixaModel.Galeria" />
+          <EntitySet Name="indices" EntityType="FredDaCaixaModel.Index" />
+          <EntitySet Name="propostas" EntityType="FredDaCaixaModel.Proposta" />
+          <EntitySet Name="usuarios" EntityType="FredDaCaixaModel.Usuario" />
+          <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.fk_Foto_Galeria">
+            <End Role="galeria" EntitySet="galerias" />
+            <End Role="foto" EntitySet="fotoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Foto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="GaleriaID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImagemUrl" Type="String" />
+          <Property Name="Legenda" Type="String" />
+          <Property Name="Titulo" Type="String" />
+          <NavigationProperty Name="galeria" Relationship="FredDaCaixaModel.fk_Foto_Galeria" FromRole="foto" ToRole="galeria" />
+        </EntityType>
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImagemUrl" Type="String" />
+          <Property Name="Legenda" Type="String" />
+          <Property Name="Titulo" Type="String" />
+          <NavigationProperty Name="fotoes" Relationship="FredDaCaixaModel.fk_Foto_Galeria" FromRole="galeria" ToRole="foto" />
+        </EntityType>
+        <EntityType Name="Index">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="String" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="String" />
+          <Property Name="Titulo" Type="String" />
+        </EntityType>
+        <EntityType Name="Proposta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="String" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="String" />
+          <Property Name="Titulo" Type="String" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Senha" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_Foto_Galeria">
+          <End Role="galeria" Type="FredDaCaixaModel.Galeria" Multiplicity="1" />
+          <End Role="foto" Type="FredDaCaixaModel.Foto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="galeria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="foto">
+              <PropertyRef Name="GaleriaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FredDaCaixaModelStoreContainer" CdmEntityContainer="FredDaCaixaEntities">
+          <EntitySetMapping Name="fotoes"><EntityTypeMapping TypeName="FredDaCaixaModel.Foto"><MappingFragment StoreEntitySet="foto">
+            <ScalarProperty Name="GaleriaID" ColumnName="GaleriaID" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ImagemUrl" ColumnName="ImagemUrl" />
+            <ScalarProperty Name="Legenda" ColumnName="Legenda" />
+            <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="galerias"><EntityTypeMapping TypeName="FredDaCaixaModel.Galeria"><MappingFragment StoreEntitySet="galeria">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ImagemUrl" ColumnName="ImagemUrl" />
+            <ScalarProperty Name="Legenda" ColumnName="Legenda" />
+            <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="indices"><EntityTypeMapping TypeName="FredDaCaixaModel.Index"><MappingFragment StoreEntitySet="index">
+            <ScalarProperty Name="Corpo" ColumnName="Corpo" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+            <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="propostas"><EntityTypeMapping TypeName="FredDaCaixaModel.Proposta"><MappingFragment StoreEntitySet="proposta">
+            <ScalarProperty Name="Corpo" ColumnName="Corpo" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+            <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="usuarios"><EntityTypeMapping TypeName="FredDaCaixaModel.Usuario"><MappingFragment StoreEntitySet="usuario">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Login" ColumnName="Login" />
+            <ScalarProperty Name="Senha" ColumnName="Senha" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ClassesBasicas">
+        <EntityTypeShape EntityType="FredDaCaixaModel.Foto" Width="1.5" PointX="3" PointY="0.875" Height="1.9210009765625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Galeria" Width="1.5" PointX="0.75" PointY="1" Height="1.7566536458333339" IsExpanded="true" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Index" Width="1.5" PointX="0.75" PointY="3.75" Height="1.592306315104167" IsExpanded="true" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Proposta" Width="1.5" PointX="2.75" PointY="3.75" Height="1.5923063151041657" IsExpanded="true" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Usuario" Width="1.5" PointX="4.75" PointY="3.75" Height="1.4279589843749996" IsExpanded="true" />
+        <AssociationConnector Association="FredDaCaixaModel.fk_Foto_Galeria" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.878326822916667" />
+          <ConnectorPoint PointX="3" PointY="1.878326822916667" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
