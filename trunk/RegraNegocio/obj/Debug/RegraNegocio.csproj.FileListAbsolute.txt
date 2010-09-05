@@ -1,0 +1,12 @@
+C:\Documents and Settings\Ruinosus\Meus documentos\Visual Studio 2010\Projects\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.dll
+C:\Documents and Settings\Ruinosus\Meus documentos\Visual Studio 2010\Projects\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.pdb
+C:\Documents and Settings\Ruinosus\Meus documentos\Visual Studio 2010\Projects\SiteFred\RegraNegocio\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Ruinosus\Meus documentos\Visual Studio 2010\Projects\SiteFred\RegraNegocio\obj\Debug\RegraNegocio.dll
+C:\Documents and Settings\Ruinosus\Meus documentos\Visual Studio 2010\Projects\SiteFred\RegraNegocio\obj\Debug\RegraNegocio.pdb
+C:\Documents and Settings\Ruinosus\Meus documentos\Visual Studio 2010\Projects\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.dll.config
+E:\SiteFred\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.dll.config
+E:\SiteFred\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.dll
+E:\SiteFred\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.pdb
+E:\SiteFred\SiteFred\RegraNegocio\obj\Debug\ResolveAssemblyReference.cache
+E:\SiteFred\SiteFred\RegraNegocio\obj\Debug\RegraNegocio.dll
+E:\SiteFred\SiteFred\RegraNegocio\obj\Debug\RegraNegocio.pdb
