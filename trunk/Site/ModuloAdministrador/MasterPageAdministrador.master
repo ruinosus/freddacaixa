@@ -21,11 +21,13 @@
                     <Items>
                         <ig:DataMenuItem Text="Menu">
                             <Items>
-                                <ig:DataMenuItem Text="Home" NavigateUrl="~/ModuloAdministrador/ModuloIndex/Incluir.aspx">
+                                <ig:DataMenuItem Text="Home" 
+                                    NavigateUrl="~/ModuloAdministrador/ModuloIndex/Consultar.aspx">
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Text="Perfil" NavigateUrl="~/ModuloAdministrador/ModuloPerfil/Incluir.aspx">
                                 </ig:DataMenuItem>
-                                <ig:DataMenuItem Text="Propostas" NavigateUrl="~/ModuloAdministrador/ModuloProposta/Incluir.aspx">
+                                <ig:DataMenuItem Text="Propostas" 
+                                    NavigateUrl="~/ModuloAdministrador/ModuloProposta/Consultar.aspx">
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Text="Partido" NavigateUrl="~/ModuloAdministrador/ModuloPartido/Incluir.aspx">
                                 </ig:DataMenuItem>
