@@ -1,53 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="FredDaCaixaModelStoreContainer" CdmEntityContainer="FredDaCaixaEntities">
-    <EntitySetMapping Name="fotoes">
+    <EntitySetMapping Name="Foto">
       <EntityTypeMapping TypeName="FredDaCaixaModel.Foto">
         <MappingFragment StoreEntitySet="foto">
-          <ScalarProperty Name="GaleriaID" ColumnName="GaleriaID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ImagemUrl" ColumnName="ImagemUrl" />
-          <ScalarProperty Name="Legenda" ColumnName="Legenda" />
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Legenda" ColumnName="Legenda" />
+          <ScalarProperty Name="ImagemUrl" ColumnName="ImagemUrl" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GaleriaID" ColumnName="GaleriaID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="galerias">
+    <EntitySetMapping Name="Galeria">
       <EntityTypeMapping TypeName="FredDaCaixaModel.Galeria">
         <MappingFragment StoreEntitySet="galeria">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ImagemUrl" ColumnName="ImagemUrl" />
-          <ScalarProperty Name="Legenda" ColumnName="Legenda" />
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Legenda" ColumnName="Legenda" />
+          <ScalarProperty Name="ImagemUrl" ColumnName="ImagemUrl" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="indices">
+    <EntitySetMapping Name="Index">
       <EntityTypeMapping TypeName="FredDaCaixaModel.Index">
         <MappingFragment StoreEntitySet="index">
-          <ScalarProperty Name="Corpo" ColumnName="Corpo" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Corpo" ColumnName="Corpo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="propostas">
+    <EntitySetMapping Name="Proposta">
       <EntityTypeMapping TypeName="FredDaCaixaModel.Proposta">
         <MappingFragment StoreEntitySet="proposta">
-          <ScalarProperty Name="Corpo" ColumnName="Corpo" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Corpo" ColumnName="Corpo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="usuarios">
+    <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="FredDaCaixaModel.Usuario">
         <MappingFragment StoreEntitySet="usuario">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -3,8 +3,7 @@
 
 
 
-<%@ Register Assembly="Infragistics35.WebUI.WebHtmlEditor.v10.1, Version=10.1.20101.1011, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb"
-    Namespace="Infragistics.WebUI.WebHtmlEditor" TagPrefix="ighedit" %>
+<%@ Register assembly="Infragistics4.WebUI.WebHtmlEditor.v10.2, Version=10.2.20102.1011, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" namespace="Infragistics.WebUI.WebHtmlEditor" tagprefix="ighedit" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="Server">
     Incluir Conteúdo das Propostas
 </asp:Content>

@@ -1,66 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="FredDaCaixaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="FredDaCaixaEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="fotoes" EntityType="FredDaCaixaModel.Foto" />
-    <EntitySet Name="galerias" EntityType="FredDaCaixaModel.Galeria" />
-    <EntitySet Name="indices" EntityType="FredDaCaixaModel.Index" />
-    <EntitySet Name="propostas" EntityType="FredDaCaixaModel.Proposta" />
-    <EntitySet Name="usuarios" EntityType="FredDaCaixaModel.Usuario" />
+    <EntitySet Name="Foto" EntityType="FredDaCaixaModel.Foto" />
+    <EntitySet Name="Galeria" EntityType="FredDaCaixaModel.Galeria" />
+    <EntitySet Name="Index" EntityType="FredDaCaixaModel.Index" />
+    <EntitySet Name="Proposta" EntityType="FredDaCaixaModel.Proposta" />
+    <EntitySet Name="Usuario" EntityType="FredDaCaixaModel.Usuario" />
     <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.fk_Foto_Galeria">
-      <End Role="galeria" EntitySet="galerias" />
-      <End Role="foto" EntitySet="fotoes" />
+      <End Role="galeria" EntitySet="Galeria" />
+      <End Role="foto" EntitySet="Foto" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Foto">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="GaleriaID" Type="Int32" Nullable="false" />
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ImagemUrl" Type="String" />
-    <Property Name="Legenda" Type="String" />
-    <Property Name="Titulo" Type="String" />
+    <Property Type="Int32" Name="GaleriaID" Nullable="false" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ImagemUrl" />
+    <Property Type="String" Name="Legenda" />
+    <Property Type="String" Name="Titulo" />
     <NavigationProperty Name="galeria" Relationship="FredDaCaixaModel.fk_Foto_Galeria" FromRole="foto" ToRole="galeria" />
   </EntityType>
   <EntityType Name="Galeria">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ImagemUrl" Type="String" />
-    <Property Name="Legenda" Type="String" />
-    <Property Name="Titulo" Type="String" />
-    <NavigationProperty Name="fotoes" Relationship="FredDaCaixaModel.fk_Foto_Galeria" FromRole="galeria" ToRole="foto" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ImagemUrl" />
+    <Property Type="String" Name="Legenda" />
+    <Property Type="String" Name="Titulo" />
+    <NavigationProperty Name="foto" Relationship="FredDaCaixaModel.fk_Foto_Galeria" FromRole="galeria" ToRole="foto" />
   </EntityType>
   <EntityType Name="Index">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Corpo" Type="String" />
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SubTitulo" Type="String" />
-    <Property Name="Titulo" Type="String" />
+    <Property Type="String" Name="Corpo" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SubTitulo" />
+    <Property Type="String" Name="Titulo" />
   </EntityType>
   <EntityType Name="Proposta">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Corpo" Type="String" />
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SubTitulo" Type="String" />
-    <Property Name="Titulo" Type="String" />
+    <Property Type="String" Name="Corpo" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SubTitulo" />
+    <Property Type="String" Name="Titulo" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Login" Type="String" Nullable="false" />
-    <Property Name="Senha" Type="String" Nullable="false" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Login" Nullable="false" />
+    <Property Type="String" Name="Senha" Nullable="false" />
   </EntityType>
   <Association Name="fk_Foto_Galeria">
-    <End Role="galeria" Type="FredDaCaixaModel.Galeria" Multiplicity="1" />
-    <End Role="foto" Type="FredDaCaixaModel.Foto" Multiplicity="*" />
+    <End Type="FredDaCaixaModel.Galeria" Role="galeria" Multiplicity="1" />
+    <End Type="FredDaCaixaModel.Foto" Role="foto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="galeria">
         <PropertyRef Name="ID" />

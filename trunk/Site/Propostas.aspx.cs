@@ -10,10 +10,10 @@ public partial class Projetos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        IPropostaControlador controlador = PropostaControlador.Instance;
+        //IPropostaControlador controlador = PropostaControlador.Instance;
 
 
-        gridProposta.DataSource = controlador.Consultar();
-        gridProposta.DataBind();
+        //gridProposta.DataSource = controlador.Consultar();
+        //gridProposta.DataBind();
     }
 }

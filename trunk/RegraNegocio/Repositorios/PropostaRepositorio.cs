@@ -20,7 +20,7 @@ namespace Repositorios
 
         public void Incluir(Proposta proposta)
         {
-            db.AddTopropostas(proposta);
+            db.AddToProposta(proposta);
         }
 
         public void Excluir(Proposta proposta)
@@ -142,7 +142,7 @@ namespace Repositorios
 
         public List<Proposta> Consultar()
         {
-            return db.propostas.ToList();
+            return db.Proposta.ToList();
         }
 
         public void Confirmar()
