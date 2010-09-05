@@ -10,3 +10,9 @@ E:\SiteFred\SiteFred\RegraNegocio\bin\Debug\RegraNegocio.pdb
 E:\SiteFred\SiteFred\RegraNegocio\obj\Debug\ResolveAssemblyReference.cache
 E:\SiteFred\SiteFred\RegraNegocio\obj\Debug\RegraNegocio.dll
 E:\SiteFred\SiteFred\RegraNegocio\obj\Debug\RegraNegocio.pdb
+E:\freddacaixa\RegraNegocio\bin\Debug\RegraNegocio.dll.config
+E:\freddacaixa\RegraNegocio\bin\Debug\RegraNegocio.dll
+E:\freddacaixa\RegraNegocio\bin\Debug\RegraNegocio.pdb
+E:\freddacaixa\RegraNegocio\obj\Debug\ResolveAssemblyReference.cache
+E:\freddacaixa\RegraNegocio\obj\Debug\RegraNegocio.dll
+E:\freddacaixa\RegraNegocio\obj\Debug\RegraNegocio.pdb
