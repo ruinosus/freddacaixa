@@ -17,7 +17,7 @@ public partial class Index : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        try
+        //try
         {
             IIndexControlador controlador = IndexControlador.Instance;
 
@@ -25,11 +25,11 @@ public partial class Index : System.Web.UI.Page
             gridIndex.DataSource = controlador.Consultar();
             gridIndex.DataBind();
         }
-        catch (Exception exe)
-        {
+        //catch (Exception exe)
+        //{
             
          
-        }
+        //}
        
     }
 
