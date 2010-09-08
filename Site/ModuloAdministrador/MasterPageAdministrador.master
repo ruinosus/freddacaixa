@@ -13,8 +13,7 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+
             <div id="header">
                 <ig:WebDataMenu ID="WebDataMenuPrincipal" runat="server" OnItemClick="WebDataMenuPrincipal_ItemClick">
                     <GroupSettings Orientation="Vertical" />
@@ -56,8 +55,7 @@
                     </a>
                 </h1>
             </div>
-            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                <ContentTemplate>
+           
                     <div id="page">
                         <div id="page-bgbtm">
                             <div id="content">
@@ -76,10 +74,7 @@
                             </div>
                         </div>
                     </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+               
     </form>
     <div id="footer">
         <p>
