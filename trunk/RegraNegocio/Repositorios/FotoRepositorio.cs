@@ -76,7 +76,17 @@ namespace Repositorios
 
                             resultado = resultado.Distinct().ToList();
                         }
+                        if (foto.GaleriaID!= 0)
+                        {
 
+                            resultado = ((from p in resultado
+                                          where
+                                          p.GaleriaID== foto.GaleriaID
+                                          select p).ToList());
+
+
+                            resultado = resultado.Distinct().ToList();
+                        }
                        
                         
                         break;
@@ -102,6 +112,18 @@ namespace Repositorios
                             resultado.AddRange((from p in resultado
                                                 where
                                                 p.Titulo.Contains(foto.Titulo)
+                                                select p).ToList());
+
+
+                            resultado = resultado.Distinct().ToList();
+                        }
+
+                        if (foto.GaleriaID != 0)
+                        {
+
+                            resultado.AddRange((from p in resultado
+                                                where
+                                                p.GaleriaID== foto.GaleriaID
                                                 select p).ToList());
 
 
