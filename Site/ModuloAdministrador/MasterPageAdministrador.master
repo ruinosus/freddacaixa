@@ -23,14 +23,14 @@
                                 <ig:DataMenuItem Text="Home" 
                                     NavigateUrl="~/ModuloAdministrador/ModuloIndex/Consultar.aspx">
                                 </ig:DataMenuItem>
-                                <ig:DataMenuItem Text="Perfil" NavigateUrl="~/ModuloAdministrador/ModuloPerfil/Incluir.aspx">
+                                <ig:DataMenuItem Text="Perfil" NavigateUrl="~/ModuloAdministrador/ModuloPerfil/Consultar.aspx">
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Text="Propostas" 
                                     NavigateUrl="~/ModuloAdministrador/ModuloProposta/Consultar.aspx">
                                 </ig:DataMenuItem>
-                                <ig:DataMenuItem Text="Partido" NavigateUrl="~/ModuloAdministrador/ModuloPartido/Incluir.aspx">
+                                <ig:DataMenuItem Text="Partido" NavigateUrl="~/ModuloAdministrador/ModuloPartido/Consultar.aspx">
                                 </ig:DataMenuItem>
-                                <ig:DataMenuItem Text="Galerias" NavigateUrl="~/ModuloAdministrador/ModuloGaleria/Incluir.aspx">
+                                <ig:DataMenuItem Text="Galerias" NavigateUrl="~/ModuloAdministrador/ModuloGaleria/ConsultarGaleria.aspx">
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem IsSeparator="True" Text="[Separator]">
                                 </ig:DataMenuItem>
