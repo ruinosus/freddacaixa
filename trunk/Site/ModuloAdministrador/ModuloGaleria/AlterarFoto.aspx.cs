@@ -44,10 +44,15 @@ public partial class ModuloAdministrador_ModuloFoto_AlterarFoto : System.Web.UI.
     {
         try
         {
+            if (Session["GaleriaIncluirFoto"] == null)
+                Response.Redirect(SiteConstantes.PAGINA_PRINCIPAL);
+
+            Galeria galeria = (Galeria)Session["GaleriaIncluirFoto"];
+
             IFotoControlador controlador = FotoControlador.Instance;
 
             Foto foto = new Foto();
-
+            foto.GaleriaID = galeria.ID;
             foto = (Foto)Session["FotoAlterar"];
             foto.Titulo = txtTitulo.Text;
 

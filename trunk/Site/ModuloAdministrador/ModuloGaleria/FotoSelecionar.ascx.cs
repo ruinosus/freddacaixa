@@ -128,14 +128,18 @@ public partial class ModuloAdministrador_ModuloFoto_FotoSelecionar : System.Web.
     {
         try
         {
+            if (Session["GaleriaIncluirFoto"] == null)
+                Response.Redirect(SiteConstantes.PAGINA_PRINCIPAL);
+
+            Galeria galeria = (Galeria)Session["GaleriaIncluirFoto"];
             FotoList = new List<Foto>();
            
             if (!string.IsNullOrEmpty(txtTitulo.Text.Trim()))
             {
                 IFotoControlador controlador = FotoControlador.Instance;
                 Foto foto = new Foto();
-                foto.Titulo = txtTitulo.Text.Trim();              
-
+                foto.Titulo = txtTitulo.Text.Trim();
+                foto.GaleriaID = galeria.ID;
 
                 FotoList = controlador.Consultar(foto, TipoPesquisa.E);
 
@@ -145,12 +149,11 @@ public partial class ModuloAdministrador_ModuloFoto_FotoSelecionar : System.Web.
             else
             {
                 IFotoControlador controlador = FotoControlador.Instance;
+                Foto foto = new Foto();
 
+                foto.GaleriaID = galeria.ID;
 
-
-
-                FotoList = controlador.Consultar();
-
+                FotoList = controlador.Consultar(foto, TipoPesquisa.E);
 
                 GrdFoto.DataSource = FotoList;
                 GrdFoto.DataBind();

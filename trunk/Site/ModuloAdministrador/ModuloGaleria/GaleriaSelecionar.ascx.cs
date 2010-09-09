@@ -205,7 +205,7 @@ public partial class ModuloAdministrador_ModuloGaleria_GaleriaSelecionar : Syste
     {
         if (GaleriaList == null || GaleriaList.Count == 0)
         {
-            PreencherGridVazio();
+            PreencherGridVazio(); 
         }
     }
 

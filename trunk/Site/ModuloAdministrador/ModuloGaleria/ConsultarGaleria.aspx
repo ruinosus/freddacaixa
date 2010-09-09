@@ -26,6 +26,7 @@ Consultar Postagens Galeria
                                 <asp:Button ID="btnIncluir" runat="server" Text="Incluir" CssClass="botao" Font-Bold="True" ForeColor="#0033CC" PostBackUrl="~/ModuloAdministrador/ModuloGaleria/IncluirGaleria.aspx" />
                                 <asp:Button ID="btnAlterar" runat="server" Text="Alterar" CssClass="botao" Font-Bold="True" ForeColor="#0033CC" OnClick="btnAlterar_Click" />
                                 <asp:Button ID="btnExcluir" runat="server" Text="Excluir" CssClass="botao" Font-Bold="True" ForeColor="#0033CC" OnClick="btnExcluir_Click" />
+                                  <asp:Button ID="btnSelecionar" runat="server" Text="Selecionar Galeria" CssClass="botao" Font-Bold="True" ForeColor="#0033CC" OnClick="btnSelecionar_Click" />
                                 
                             </td>
                         </tr>
