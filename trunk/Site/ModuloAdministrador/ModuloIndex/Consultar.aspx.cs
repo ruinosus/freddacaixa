@@ -96,23 +96,5 @@ public partial class ModuloAdministrador_ModuloIndex_Consultar : System.Web.UI.P
         }
     }
 
-    protected void btnImagem_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            IIndexControlador processo = IndexControlador.Instance;
-            Index index = new Index();
-            index.ID = IndexSelecionar1.IdIndex;
-
-
-            Session.Add("IndexIncluirImagem", processo.Consultar(index, TipoPesquisa.E)[0]);
-            Response.Redirect("~/ModuloImagem/Consultar.aspx", false);
-        }
-        catch (Exception ex)
-        {
-
-            cvaAvisoDeErro.ErrorMessage = ex.Message;
-            cvaAvisoDeErro.IsValid = false;
-        }
-    }
+  
 }

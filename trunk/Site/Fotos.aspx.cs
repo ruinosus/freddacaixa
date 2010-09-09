@@ -25,7 +25,7 @@ public partial class Fotos : System.Web.UI.Page
                 foreach (Foto   f in resultado)
                 {
                     f.ImagemUrl = f.ImagemUrl.Replace("\\", "/");
-                    int index = f.ImagemUrl.IndexOf("/Modulo");
+                    int index = f.ImagemUrl.IndexOf("/ModuloAdministrador");
                     f.ImagemUrl = f.ImagemUrl.Substring(index, f.ImagemUrl.Length - index);
                     f.ImagemUrl = "~" + f.ImagemUrl;
 

@@ -4,6 +4,9 @@
     <EntitySet Name="foto" EntityType="FredDaCaixaModel.Store.foto" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="lider" EntityType="FredDaCaixaModel.Store.lider" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="partido" EntityType="FredDaCaixaModel.Store.partido" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="perfil" EntityType="FredDaCaixaModel.Store.perfil" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="thecase" />
     <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
@@ -31,6 +34,45 @@
     <Property Name="Titulo" Type="varchar" MaxLength="8000" />
   </EntityType>
   <EntityType Name="index">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="lider">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Bairro" Type="varchar" MaxLength="100" />
+    <Property Name="Cep" Type="varchar" MaxLength="45" />
+    <Property Name="Cidade" Type="varchar" MaxLength="45" />
+    <Property Name="Complemento" Type="varchar" MaxLength="45" />
+    <Property Name="Cpf" Type="varchar" MaxLength="45" />
+    <Property Name="Email" Type="varchar" MaxLength="45" />
+    <Property Name="Estado" Type="varchar" MaxLength="45" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Local" Type="varchar" MaxLength="100" />
+    <Property Name="Logradouro" Type="varchar" MaxLength="100" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" />
+    <Property Name="Numero" Type="varchar" MaxLength="45" />
+    <Property Name="Obs" Type="varchar" MaxLength="8000" />
+    <Property Name="Rg" Type="varchar" MaxLength="45" />
+    <Property Name="Telefone1" Type="varchar" MaxLength="45" />
+    <Property Name="Telefone2" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="partido">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="perfil">
     <Key>
       <PropertyRef Name="ID" />
     </Key>

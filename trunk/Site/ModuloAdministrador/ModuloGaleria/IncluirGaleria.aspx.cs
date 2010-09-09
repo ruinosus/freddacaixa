@@ -15,6 +15,7 @@ public partial class ModuloAdministrador_ModuloGaleria_IncluirGaleria : System.W
     {
 
     }
+
     protected void btnConfirmar_Click(object sender, EventArgs e)
     {
         try
@@ -31,7 +32,7 @@ public partial class ModuloAdministrador_ModuloGaleria_IncluirGaleria : System.W
 
                 controlador.Incluir(galeria);
                 string pastaUrl = SiteConstantes.RecuperarNomePastaGaleria(Server.MapPath(".\\"), galeria.ID);
-                pastaUrl = SiteConstantes.RecuperarPastaGaleria(pastaUrl);
+                pastaUrl = SiteConstantes.RecuperarPasta(pastaUrl);
                 galeria.ImagemUrl = pastaUrl + filepath;
                 fileUpEx.PostedFile.SaveAs(galeria.ImagemUrl);
 

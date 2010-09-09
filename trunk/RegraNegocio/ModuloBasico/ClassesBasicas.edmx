@@ -9,6 +9,9 @@
           <EntitySet Name="foto" EntityType="FredDaCaixaModel.Store.foto" store:Type="Tables" Schema="thecase" />
           <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="thecase" />
           <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="thecase" />
+          <EntitySet Name="lider" EntityType="FredDaCaixaModel.Store.lider" store:Type="Tables" Schema="thecase" />
+          <EntitySet Name="partido" EntityType="FredDaCaixaModel.Store.partido" store:Type="Tables" Schema="thecase" />
+          <EntitySet Name="perfil" EntityType="FredDaCaixaModel.Store.perfil" store:Type="Tables" Schema="thecase" />
           <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="thecase" />
           <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="thecase" />
           <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
@@ -36,6 +39,45 @@
           <Property Name="Titulo" Type="varchar" MaxLength="8000" />
         </EntityType>
         <EntityType Name="index">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="lider">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Bairro" Type="varchar" MaxLength="100" />
+          <Property Name="Cep" Type="varchar" MaxLength="45" />
+          <Property Name="Cidade" Type="varchar" MaxLength="45" />
+          <Property Name="Complemento" Type="varchar" MaxLength="45" />
+          <Property Name="Cpf" Type="varchar" MaxLength="45" />
+          <Property Name="Email" Type="varchar" MaxLength="45" />
+          <Property Name="Estado" Type="varchar" MaxLength="45" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Local" Type="varchar" MaxLength="100" />
+          <Property Name="Logradouro" Type="varchar" MaxLength="100" />
+          <Property Name="Nome" Type="varchar" MaxLength="100" />
+          <Property Name="Numero" Type="varchar" MaxLength="45" />
+          <Property Name="Obs" Type="varchar" MaxLength="8000" />
+          <Property Name="Rg" Type="varchar" MaxLength="45" />
+          <Property Name="Telefone1" Type="varchar" MaxLength="45" />
+          <Property Name="Telefone2" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="partido">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityType Name="perfil">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -87,6 +129,9 @@
             <End Role="galeria" EntitySet="Galeria" />
             <End Role="foto" EntitySet="Foto" />
           </AssociationSet>
+          <EntitySet Name="Partido" EntityType="FredDaCaixaModel.Partido" />
+          <EntitySet Name="Perfil" EntityType="FredDaCaixaModel.Perfil" />
+          <EntitySet Name="Lider" EntityType="FredDaCaixaModel.Lider" />
         </EntityContainer>
         <EntityType Name="Foto">
           <Key>
@@ -147,6 +192,45 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Partido">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="Corpo" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SubTitulo" />
+          <Property Type="String" Name="Titulo" />
+        </EntityType>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="Corpo" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SubTitulo" />
+          <Property Type="String" Name="Titulo" />
+        </EntityType>
+        <EntityType Name="Lider">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="Bairro" />
+          <Property Type="String" Name="Cep" />
+          <Property Type="String" Name="Cidade" />
+          <Property Type="String" Name="Complemento" />
+          <Property Type="String" Name="Cpf" />
+          <Property Type="String" Name="Email" />
+          <Property Type="String" Name="Estado" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Local" />
+          <Property Type="String" Name="Logradouro" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Numero" />
+          <Property Type="String" Name="Obs" />
+          <Property Type="String" Name="Rg" />
+          <Property Type="String" Name="Telefone1" />
+          <Property Type="String" Name="Telefone2" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -203,6 +287,48 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Partido">
+            <EntityTypeMapping TypeName="FredDaCaixaModel.Partido">
+              <MappingFragment StoreEntitySet="partido">
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Corpo" ColumnName="Corpo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Perfil">
+            <EntityTypeMapping TypeName="FredDaCaixaModel.Perfil">
+              <MappingFragment StoreEntitySet="perfil">
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Corpo" ColumnName="Corpo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lider">
+            <EntityTypeMapping TypeName="FredDaCaixaModel.Lider">
+              <MappingFragment StoreEntitySet="lider">
+                <ScalarProperty Name="Telefone2" ColumnName="Telefone2" />
+                <ScalarProperty Name="Telefone1" ColumnName="Telefone1" />
+                <ScalarProperty Name="Rg" ColumnName="Rg" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Cep" ColumnName="Cep" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -233,6 +359,9 @@
           <ConnectorPoint PointX="2.25" PointY="1.8783268229166659" />
           <ConnectorPoint PointX="3" PointY="1.8783268229166659" />
         </AssociationConnector>
+        <EntityTypeShape EntityType="FredDaCaixaModel.Partido" Width="1.5" PointX="5.75" PointY="0.75" Height="1.5923063151041665" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Perfil" Width="1.5" PointX="0.75" PointY="6.75" Height="1.5923063151041674" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Lider" Width="1.5" PointX="3.375" PointY="6.75" Height="3.5644742838541674" />
       </Diagram>
     </Diagrams>
   </Designer>
