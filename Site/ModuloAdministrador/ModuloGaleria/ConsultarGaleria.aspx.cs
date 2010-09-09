@@ -30,6 +30,7 @@ public partial class ModuloAdministrador_ModuloGaleria_ConsultarGaleria : System
         {
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
+            this.btnSelecionar.Enabled = true;
  
         }
 
@@ -40,6 +41,7 @@ public partial class ModuloAdministrador_ModuloGaleria_ConsultarGaleria : System
         btnIncluir.Enabled = false;
         btnAlterar.Enabled = false;
         btnExcluir.Enabled = false;
+        this.btnSelecionar.Enabled = false;
 
     }
     protected void GaleriaSelecionar1_OnSelect(object sender, EventArgs e)
@@ -81,6 +83,16 @@ public partial class ModuloAdministrador_ModuloGaleria_ConsultarGaleria : System
             Galeria galeria = new Galeria();
             galeria.ID = GaleriaSelecionar1.IdGaleria;
 
+            IFotoControlador controladorFoto = FotoControlador.Instance;
+
+            Foto foto = new Foto();
+            foto.GaleriaID = galeria.ID;
+
+            List<Foto> listafoto = controladorFoto.Consultar(foto, TipoPesquisa.E);
+
+            if (listafoto.Count > 0)
+                throw new Exception("A galeria contém fotos cadastradas");
+
             processo.Excluir(galeria);
             cvaAvisoDeInformacao.ErrorMessage = SiteConstantes.GALERIA_EXCLUIDA;
             cvaAvisoDeInformacao.IsValid = false;
@@ -96,7 +108,7 @@ public partial class ModuloAdministrador_ModuloGaleria_ConsultarGaleria : System
         }
     }
 
-    protected void btnImagem_Click(object sender, EventArgs e)
+    protected void btnSelecionar_Click(object sender, EventArgs e)
     {
         try
         {
@@ -105,8 +117,8 @@ public partial class ModuloAdministrador_ModuloGaleria_ConsultarGaleria : System
             galeria.ID = GaleriaSelecionar1.IdGaleria;
 
 
-            Session.Add("GaleriaIncluirImagem", processo.Consultar(galeria, TipoPesquisa.E)[0]);
-            Response.Redirect("~/ModuloGaleria/ConsultarGaleria.aspx", false);
+            Session.Add("GaleriaIncluirFoto", processo.Consultar(galeria, TipoPesquisa.E)[0]);
+            Response.Redirect("ConsultarFoto.aspx", false);
         }
         catch (Exception ex)
         {

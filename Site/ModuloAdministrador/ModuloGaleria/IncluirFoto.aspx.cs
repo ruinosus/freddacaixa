@@ -20,13 +20,17 @@ public partial class ModuloAdministrador_ModuloFoto_IncluirFoto : System.Web.UI.
     {
         try
         {
+            if (Session["GaleriaIncluirFoto"] == null)
+                Response.Redirect(SiteConstantes.PAGINA_PRINCIPAL);
+
+            Galeria galeria = (Galeria)Session["GaleriaIncluirFoto"];
             if (fileUpEx.HasFile)
             {
                 string filepath = fileUpEx.PostedFile.FileName;
 
                 IFotoControlador controlador = FotoControlador.Instance;
                 Foto foto = new Foto();
-
+                foto.GaleriaID = galeria.ID;
                 foto.Titulo = txtTitulo.Text;
                 foto.Legenda = txtLegenda.Text;
 

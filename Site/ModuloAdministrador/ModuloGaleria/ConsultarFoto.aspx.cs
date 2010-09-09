@@ -96,23 +96,5 @@ public partial class ModuloAdministrador_ModuloFoto_ConsultarFoto : System.Web.U
         }
     }
 
-    protected void btnImagem_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            IFotoControlador processo = FotoControlador.Instance;
-            Foto foto = new Foto();
-            foto.ID = FotoSelecionar1.IdFoto;
-
-
-            Session.Add("FotoIncluirImagem", processo.Consultar(foto, TipoPesquisa.E)[0]);
-            Response.Redirect("~/ModuloFoto/ConsultarFoto.aspx", false);
-        }
-        catch (Exception ex)
-        {
-
-            cvaAvisoDeErro.ErrorMessage = ex.Message;
-            cvaAvisoDeErro.IsValid = false;
-        }
-    }
+   
 }
