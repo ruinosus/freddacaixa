@@ -42,7 +42,7 @@
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Text="Partido" Key="Partido" Value="Partido" CssClass="menu-item">
                                 </ig:DataMenuItem>
-                                <ig:DataMenuItem Text="Fotos" Key="Fotos" Value="Fotos" CssClass="menu-item">
+                                <ig:DataMenuItem Text="Videos" Key="Videos" Value="Videos" CssClass="menu-item">
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Text="Contato" Key="Contato" Value="Contato" CssClass="menu-item">
                                 </ig:DataMenuItem>

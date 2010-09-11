@@ -34,7 +34,7 @@
         </asp:GridView>
         <ig:WebImageViewer ID="WebImageViewer1" Height="120px" Width="640px"
             runat="server" 
-            onselectedindexchanged="WebImageViewer1_SelectedIndexChanged">
+            onselectedindexchanged="WebImageViewer1_SelectedIndexChanged"><Templates></Templates>
            
             <ImageItemBinding   ImageUrlField="ImagemUrl" 
             />

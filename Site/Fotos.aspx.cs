@@ -30,9 +30,9 @@ public partial class Fotos : System.Web.UI.Page
                     f.ImagemUrl = "~" + f.ImagemUrl;
 
                 }
-
-                gridFotos.DataSource = resultado;
-                gridFotos.DataBind();
+             
+                gridFotos1.DataSource = resultado;
+                gridFotos1.DataBind();
             }
             catch (Exception)
             {

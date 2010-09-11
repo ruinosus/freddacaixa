@@ -13,7 +13,9 @@
         </div>
     </div>
     <div class="mpart">
-        <asp:GridView runat="server" ID="gridFotos" AutoGenerateColumns="false" BorderColor="White"
+        <table width="100%">
+            <tr>
+                <td><asp:GridView runat="server" ID="gridFotos1" AutoGenerateColumns="false" BorderColor="White"
             BorderWidth="0px" EnableTheming="True">
             <Columns>
                 <asp:TemplateField>
@@ -31,5 +33,29 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+                </td>
+                <td><asp:GridView runat="server" ID="gridFotos2" AutoGenerateColumns="false" BorderColor="White"
+            BorderWidth="0px" EnableTheming="True">
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <h3>
+                            <asp:Label ID="lblTitulo" runat="server" Text='<%# Eval("Titulo") %>' />
+                        </h3>
+                        <p>
+                            <asp:Image runat="server" ID="imgFoto" Height="200px" Width="300px" ImageUrl='<%# Eval("ImagemUrl") %>' />
+                        </p>
+                        <p>
+                            <asp:Label ID="lblLegenda" runat="server" Text='<%# Eval("Legenda") %>' />
+                        </p>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+                </td>
+            </tr>
+        </table>
+        
+        
     </div>
 </asp:Content>
