@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
@@ -75,6 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClassesBasicas.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModuloBasico\Email.cs" />
     <Compile Include="ModuloBasico\Enumeradores.cs" />
     <Compile Include="ModuloBasico\Singleton.cs" />
     <Compile Include="ModuloBasico\SiteConstantes.cs" />

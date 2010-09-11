@@ -26,8 +26,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if (e.Item.Value.Equals("Partido"))
             Response.Redirect("Partido.aspx");
 
-        if (e.Item.Value.Equals("Fotos"))
-            Response.Redirect("Fotos.aspx");
+        if (e.Item.Value.Equals("Videos"))
+            Response.Redirect("Videos.aspx");
 
         if (e.Item.Value.Equals("Propostas"))
             Response.Redirect("Propostas.aspx");
