@@ -20,10 +20,22 @@ namespace RegraNegocio.ModuloBasico
         /// <param name="desejaReceber">Se deseja receber informações</param>
         public static void EnviarEmail(string emailDestinatario, string assunto, string mensagem, string Nome, bool desejaReceber, string emailInformado)
         {
+           
+            #region Enviar email The Case
+            
+            //     SmtpClient client = new SmtpClient();
+            //client.Host = "smtp-web.kinghost.net";
+            //System.Net.NetworkCredential mailAuthentication = new System.Net.NetworkCredential("thecase@thecase.com.br", "e7k6v9n9");
+          
+            #endregion
+            #region Enviar email Gmail
             //Cria o objeto que envia o e-mail
-            SmtpClient client = new SmtpClient();
-            client.Host = "smtp-web.kinghost.net";
-            System.Net.NetworkCredential mailAuthentication = new System.Net.NetworkCredential("thecase@thecase.com.br", "e7k6v9n9");
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+
+            System.Net.NetworkCredential mailAuthentication = new System.Net.NetworkCredential("ruinosus@gmail.com", "ruinas");
+
+
+            #endregion
             //Cria o endereço de email do remetente
             MailAddress de = new MailAddress(System.Configuration.ConfigurationManager.AppSettings["emailRemetente"]);
             //Cria o endereço de email do destinatário -->
@@ -52,8 +64,10 @@ namespace RegraNegocio.ModuloBasico
             try
             {
                 client.EnableSsl = true;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-                client.UseDefaultCredentials = false;
+
+               // client.UseDefaultCredentials = false;
 
                 client.Credentials = mailAuthentication;
                 //Envia o email
