@@ -38,7 +38,7 @@
         </tr>
         <tr>
             <td>
-                <asp:CheckBox Text="Desejo receber informações por email" Checked="false" runat="server" ID="ckbInformação" />
+                <asp:CheckBox Text="Desejo receber informações por email" Checked="false" runat="server" ID="ckbInformacao" />
             </td>
         </tr>
         <tr>
