@@ -47,174 +47,455 @@
                     FontNameList="Arial,Verdana,Tahoma,Courier New,Georgia" FontSizeList="1,2,3,4,5,6,7"
                     FontStyleList="Blue Underline=color:blue;text-decoration:underline;&amp;Red Bold=color:red;font-weight:bold;&amp;ALL CAPS=text-transform:uppercase;&amp;all lowercase=text-transform:lowercase;&amp;Reset="
                     
-                    SpecialCharacterList="&amp;#937;,&amp;#931;,&amp;#916;,&amp;#934;,&amp;#915;,&amp;#936;,&amp;#928;,&amp;#920;,&amp;#926;,&amp;#923;,&amp;#958;,&amp;#956;,&amp;#951;,&amp;#966;,&amp;#969;,&amp;#949;,&amp;#952;,&amp;#948;,&amp;#950;,&amp;#968;,&amp;#946;,&amp;#960;,&amp;#963;,&amp;szlig;,&amp;thorn;,&amp;THORN;,&amp;#402,&amp;#1046;,&amp;#1064;,&amp;#1070;,&amp;#1071;,&amp;#1078;,&amp;#1092;,&amp;#1096;,&amp;#1102;,&amp;#1103;,&amp;#12362;,&amp;#12354;,&amp;#32117;,&amp;AElig;,&amp;Aring;,&amp;Ccedil;,&amp;ETH;,&amp;Ntilde;,&amp;Ouml;,&amp;aelig;,&amp;aring;,&amp;atilde;,&amp;ccedil;,&amp;eth;,&amp;euml;,&amp;ntilde;,&amp;cent;,&amp;pound;,&amp;curren;,&amp;yen;,&amp;#8470;,&amp;#153;,&amp;copy;,&amp;reg;,&amp;#151;,@,&amp;#149;,&amp;iexcl;,&amp;#14;,&amp;#8592;,&amp;#8593;,&amp;#8594;,&amp;#8595;,&amp;#8596;,&amp;#8597;,&amp;#8598;,&amp;#8599;,&amp;#8600;,&amp;#8601;,&amp;#18;,&amp;brvbar;,&amp;sect;,&amp;uml;,&amp;ordf;,&amp;not;,&amp;macr;,&amp;para;,&amp;deg;,&amp;plusmn;,&amp;laquo;,&amp;raquo;,&amp;middot;,&amp;cedil;,&amp;ordm;,&amp;sup1;,&amp;sup2;,&amp;sup3;,&amp;frac14;,&amp;frac12;,&amp;frac34;,&amp;iquest;,&amp;times;,&amp;divide;">
-                    <RightClickMenu>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="Cut">
+                    
+                    SpecialCharacterList="&amp;#937;,&amp;#931;,&amp;#916;,&amp;#934;,&amp;#915;,&amp;#936;,&amp;#928;,&amp;#920;,&amp;#926;,&amp;#923;,&amp;#958;,&amp;#956;,&amp;#951;,&amp;#966;,&amp;#969;,&amp;#949;,&amp;#952;,&amp;#948;,&amp;#950;,&amp;#968;,&amp;#946;,&amp;#960;,&amp;#963;,&amp;szlig;,&amp;thorn;,&amp;THORN;,&amp;#402,&amp;#1046;,&amp;#1064;,&amp;#1070;,&amp;#1071;,&amp;#1078;,&amp;#1092;,&amp;#1096;,&amp;#1102;,&amp;#1103;,&amp;#12362;,&amp;#12354;,&amp;#32117;,&amp;AElig;,&amp;Aring;,&amp;Ccedil;,&amp;ETH;,&amp;Ntilde;,&amp;Ouml;,&amp;aelig;,&amp;aring;,&amp;atilde;,&amp;ccedil;,&amp;eth;,&amp;euml;,&amp;ntilde;,&amp;cent;,&amp;pound;,&amp;curren;,&amp;yen;,&amp;#8470;,&amp;#153;,&amp;copy;,&amp;reg;,&amp;#151;,@,&amp;#149;,&amp;iexcl;,&amp;#14;,&amp;#8592;,&amp;#8593;,&amp;#8594;,&amp;#8595;,&amp;#8596;,&amp;#8597;,&amp;#8598;,&amp;#8599;,&amp;#8600;,&amp;#8601;,&amp;#18;,&amp;brvbar;,&amp;sect;,&amp;uml;,&amp;ordf;,&amp;not;,&amp;macr;,&amp;para;,&amp;deg;,&amp;plusmn;,&amp;laquo;,&amp;raquo;,&amp;middot;,&amp;cedil;,&amp;ordm;,&amp;sup1;,&amp;sup2;,&amp;sup3;,&amp;frac14;,&amp;frac12;,&amp;frac34;,&amp;iquest;,&amp;times;,&amp;divide;" 
+                    Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                    Font-Strikeout="False" Font-Underline="False" 
+                    ImageDirectory="~/ig_res/Default/images/htmleditor/" 
+                    UploadedFilesDirectory="~/ig_res/upload">
+                    <ProgressBar Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False" />
+                    <RightClickMenu Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False">
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="Cut" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:HtmlBoxMenuItem>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="Copy">
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="Copy" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:HtmlBoxMenuItem>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="Paste">
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="Paste" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:HtmlBoxMenuItem>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="PasteHtml">
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="PasteHtml" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:HtmlBoxMenuItem>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="CellProperties">
-                            <Dialog InternalDialogType="CellProperties"></Dialog>
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="CellProperties" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog InternalDialogType="CellProperties" Font-Bold="False" 
+                                Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                Font-Underline="False"></Dialog>
                         </ighedit:HtmlBoxMenuItem>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="TableProperties">
-                            <Dialog InternalDialogType="ModifyTable"></Dialog>
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="TableProperties" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog InternalDialogType="ModifyTable" Font-Bold="False" Font-Italic="False" 
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Dialog>
                         </ighedit:HtmlBoxMenuItem>
-                        <ighedit:HtmlBoxMenuItem runat="server" Act="InsertImage">
+                        <ighedit:HtmlBoxMenuItem runat="server" Act="InsertImage" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:HtmlBoxMenuItem>
                     </RightClickMenu>
-                    <Toolbar>
-                        <ighedit:ToolbarImage runat="server" Type="DoubleSeparator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="Bold"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Italic"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Underline"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Strikethrough"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="Subscript"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Superscript"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="Cut"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Copy"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Paste"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="Undo"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Redo"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="JustifyLeft"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="JustifyCenter"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="JustifyRight"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="JustifyFull"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="Indent"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="Outdent"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="UnorderedList"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="OrderedList"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarDialogButton runat="server" Type="InsertRule">
-                            <Dialog InternalDialogType="InsertRule"></Dialog>
+                    <DownlevelLabel Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False" />
+                    <DownlevelTextArea Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False" />
+                    <TabStrip Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False" />
+                    <Toolbar Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False">
+                        <ighedit:ToolbarImage runat="server" Type="DoubleSeparator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="Bold" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Italic" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Underline" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Strikethrough" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="Subscript" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Superscript" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="Cut" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Copy" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Paste" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="Undo" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Redo" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="JustifyLeft" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="JustifyCenter" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="JustifyRight" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="JustifyFull" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="Indent" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="Outdent" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="UnorderedList" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="OrderedList" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarDialogButton runat="server" Type="InsertRule" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog InternalDialogType="InsertRule" Font-Bold="False" Font-Italic="False" 
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Dialog>
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarImage runat="server" Type="RowSeparator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarImage runat="server" Type="DoubleSeparator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarDialogButton runat="server" Type="FontColor">
+                        <ighedit:ToolbarImage runat="server" Type="RowSeparator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarImage runat="server" Type="DoubleSeparator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarDialogButton runat="server" Type="FontColor" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarDialogButton runat="server" Type="FontHighlight">
+                        <ighedit:ToolbarDialogButton runat="server" Type="FontHighlight" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
+                            <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False" />
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarDialogButton runat="server" Type="SpecialCharacter">
-                            <Dialog InternalDialogType="SpecialCharacterPicker" Type="InternalWindow"></Dialog>
+                        <ighedit:ToolbarDialogButton runat="server" Type="SpecialCharacter" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
+                            <Dialog InternalDialogType="SpecialCharacterPicker" Type="InternalWindow" 
+                                Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False"></Dialog>
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarMenuButton runat="server" Type="InsertTable">
-                            <Menu>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="TableProperties">
-                                    <Dialog InternalDialogType="InsertTable"></Dialog>
+                        <ighedit:ToolbarMenuButton runat="server" Type="InsertTable" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Menu Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="TableProperties" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog InternalDialogType="InsertTable" Font-Bold="False" Font-Italic="False" 
+                                        Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Dialog>
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertColumnRight">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertColumnRight" 
+                                    Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                    Font-Strikeout="False" Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertColumnLeft">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertColumnLeft" 
+                                    Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                    Font-Strikeout="False" Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertRowAbove">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertRowAbove" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertRowBelow">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="InsertRowBelow" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="DeleteRow">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="DeleteRow" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="DeleteColumn">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="DeleteColumn" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="IncreaseColspan">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="IncreaseColspan" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="DecreaseColspan">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="DecreaseColspan" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="IncreaseRowspan">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="IncreaseRowspan" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="DecreaseRowspan">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="DecreaseRowspan" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="CellProperties">
-                                    <Dialog InternalDialogType="CellProperties"></Dialog>
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="CellProperties" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog InternalDialogType="CellProperties" Font-Bold="False" 
+                                        Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                        Font-Underline="False"></Dialog>
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="TableProperties">
-                                    <Dialog InternalDialogType="ModifyTable"></Dialog>
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="TableProperties" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog InternalDialogType="ModifyTable" Font-Bold="False" Font-Italic="False" 
+                                        Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Dialog>
                                 </ighedit:HtmlBoxMenuItem>
                             </Menu>
                         </ighedit:ToolbarMenuButton>
-                        <ighedit:ToolbarButton runat="server" Type="ToggleBorders"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="InsertLink"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="RemoveLink"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarButton runat="server" Type="Save" RaisePostback="True"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarUploadButton runat="server" Type="Open">
-                            <Upload Mode="File" Filter="*.htm,*.html,*.asp,*.aspx" Height="350px" Width="500px">
+                        <ighedit:ToolbarButton runat="server" Type="ToggleBorders" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="InsertLink" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="RemoveLink" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarButton runat="server" Type="Save" RaisePostback="True" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarUploadButton runat="server" Type="Open" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Upload Mode="File" Filter="*.htm,*.html,*.asp,*.aspx" Height="350px" 
+                                Width="500px" Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False">
                             </Upload>
                         </ighedit:ToolbarUploadButton>
-                        <ighedit:ToolbarButton runat="server" Type="Preview"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="Separator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarDialogButton runat="server" Type="FindReplace">
-                            <Dialog InternalDialogType="FindReplace"></Dialog>
+                        <ighedit:ToolbarButton runat="server" Type="Preview" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="Separator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarDialogButton runat="server" Type="FindReplace" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
+                            <Dialog InternalDialogType="FindReplace" Font-Bold="False" Font-Italic="False" 
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Dialog>
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarDialogButton runat="server" Type="InsertBookmark">
-                            <Dialog InternalDialogType="InsertBookmark"></Dialog>
+                        <ighedit:ToolbarDialogButton runat="server" Type="InsertBookmark" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
+                            <Dialog InternalDialogType="InsertBookmark" Font-Bold="False" 
+                                Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                Font-Underline="False"></Dialog>
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarUploadButton runat="server" Type="InsertImage">
-                            <Upload Height="420px" Width="500px"></Upload>
+                        <ighedit:ToolbarUploadButton runat="server" Type="InsertImage" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
+                            <Upload Height="420px" Width="500px" Font-Bold="False" Font-Italic="False" 
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Upload>
                         </ighedit:ToolbarUploadButton>
-                        <ighedit:ToolbarUploadButton runat="server" Type="InsertFlash">
-                            <Upload Mode="Flash" Filter="*.swf" Height="440px" Width="500px"></Upload>
+                        <ighedit:ToolbarUploadButton runat="server" Type="InsertFlash" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
+                            <Upload Mode="Flash" Filter="*.swf" Height="440px" Width="500px" 
+                                Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False"></Upload>
                         </ighedit:ToolbarUploadButton>
-                        <ighedit:ToolbarUploadButton runat="server" Type="InsertWindowsMedia">
+                        <ighedit:ToolbarUploadButton runat="server" Type="InsertWindowsMedia" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False">
                             <Upload Mode="WindowsMedia" Filter="*.asf,*.wma,*.wmv,*.wm,*.avi,*.mpg,*.mpeg,*.m1v,*.mp2,*.mp3,*.mpa,*.mpe,*.mpv2,*.m3u,*.mid,*.midi,*.rmi,*.aif,*.aifc,*.aiff,*.au,*.snd,*.wav,*.cda,*.ivf"
-                                Height="400px" Width="500px"></Upload>
+                                Height="400px" Width="500px" Font-Bold="False" Font-Italic="False" 
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Upload>
                         </ighedit:ToolbarUploadButton>
-                        <ighedit:ToolbarDialogButton runat="server" Type="Help">
-                            <Dialog InternalDialogType="Text"></Dialog>
+                        <ighedit:ToolbarDialogButton runat="server" Type="Help" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Dialog InternalDialogType="Text" Font-Bold="False" Font-Italic="False" 
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></Dialog>
                         </ighedit:ToolbarDialogButton>
-                        <ighedit:ToolbarButton runat="server" Type="CleanWord"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="WordCount"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="PasteHtml"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarMenuButton runat="server" Type="Zoom">
-                            <Menu>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom25">
+                        <ighedit:ToolbarButton runat="server" Type="CleanWord" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="WordCount" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="PasteHtml" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarMenuButton runat="server" Type="Zoom" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
+                            <Menu Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                Font-Strikeout="False" Font-Underline="False">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom25" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom50">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom50" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom75">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom75" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom100">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom100" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom200">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom200" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom300">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom300" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom400">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom400" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom500">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom500" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
-                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom600">
+                                <ighedit:HtmlBoxMenuItem runat="server" Act="Zoom600" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False">
+                                    <Dialog Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                                        Font-Strikeout="False" Font-Underline="False" />
                                 </ighedit:HtmlBoxMenuItem>
                             </Menu>
                         </ighedit:ToolbarMenuButton>
-                        <ighedit:ToolbarButton runat="server" Type="TogglePositioning"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="BringForward"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarButton runat="server" Type="SendBackward"></ighedit:ToolbarButton>
-                        <ighedit:ToolbarImage runat="server" Type="RowSeparator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarImage runat="server" Type="DoubleSeparator"></ighedit:ToolbarImage>
-                        <ighedit:ToolbarDropDown runat="server" Type="FontName">
+                        <ighedit:ToolbarButton runat="server" Type="TogglePositioning" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="BringForward" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarButton runat="server" Type="SendBackward" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarButton>
+                        <ighedit:ToolbarImage runat="server" Type="RowSeparator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarImage runat="server" Type="DoubleSeparator" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False"></ighedit:ToolbarImage>
+                        <ighedit:ToolbarDropDown runat="server" Type="FontName" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
                         </ighedit:ToolbarDropDown>
-                        <ighedit:ToolbarDropDown runat="server" Type="FontSize">
+                        <ighedit:ToolbarDropDown runat="server" Type="FontSize" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
                         </ighedit:ToolbarDropDown>
-                        <ighedit:ToolbarDropDown runat="server" Type="FontFormatting">
+                        <ighedit:ToolbarDropDown runat="server" Type="FontFormatting" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
                         </ighedit:ToolbarDropDown>
-                        <ighedit:ToolbarDropDown runat="server" Type="FontStyle">
+                        <ighedit:ToolbarDropDown runat="server" Type="FontStyle" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
                         </ighedit:ToolbarDropDown>
-                        <ighedit:ToolbarDropDown runat="server" Type="Insert">
+                        <ighedit:ToolbarDropDown runat="server" Type="Insert" Font-Bold="False" 
+                            Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                            Font-Underline="False">
                             <Items>
-                                <ighedit:ToolbarDropDownItem runat="server" Act="Greeting"></ighedit:ToolbarDropDownItem>
-                                <ighedit:ToolbarDropDownItem runat="server" Act="Signature"></ighedit:ToolbarDropDownItem>
+                                <ighedit:ToolbarDropDownItem runat="server" Act="Greeting" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False"></ighedit:ToolbarDropDownItem>
+                                <ighedit:ToolbarDropDownItem runat="server" Act="Signature" Font-Bold="False" 
+                                    Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
+                                    Font-Underline="False"></ighedit:ToolbarDropDownItem>
                             </Items>
                         </ighedit:ToolbarDropDown>
                     </Toolbar>
+                    <TextWindow Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False" />
+                    <DropDownStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                        Font-Strikeout="False" Font-Underline="False" />
                 </ighedit:WebHtmlEditor>
             </td>
         </tr>
