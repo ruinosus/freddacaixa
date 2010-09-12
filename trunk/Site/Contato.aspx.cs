@@ -18,6 +18,7 @@ public partial class Contato : System.Web.UI.Page
     {
 
         Email.EnviarEmail(System.Configuration.ConfigurationManager.AppSettings["emailDestinatario"], txtAssunto.Text, txtMensagem.Text, txtNome.Text, ckbInformacao.Checked, txtEmail.Text);
+      //  Email.EnviarEmail("jeffeson.barnabe@gmail.com", txtAssunto.Text, txtMensagem.Text, txtNome.Text, ckbInformacao.Checked, txtEmail.Text);
         txtAssunto.Text = string.Empty;
         txtEmail.Text = string.Empty;
         txtMensagem.Text = string.Empty;
