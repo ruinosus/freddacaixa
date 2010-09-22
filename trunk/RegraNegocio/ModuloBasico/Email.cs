@@ -49,7 +49,7 @@ namespace RegraNegocio.ModuloBasico
             //Conteúdo do email
             string mensagemInformacao = "O eleitor: <b><ELEITOR></b>, <FLAG> deseja receber atualizações por email. <br> Email: <b><EMAIL></b><br>";
             mensagemInformacao = mensagemInformacao.Replace("<ELEITOR>", Nome);
-            mensagemInformacao = mensagemInformacao.Replace("<EMAIL>", emailDestinatario);
+            mensagemInformacao = mensagemInformacao.Replace("<EMAIL>", emailInformado);
             if (desejaReceber)
                 mensagemInformacao = mensagemInformacao.Replace("<FLAG>", "");
             else

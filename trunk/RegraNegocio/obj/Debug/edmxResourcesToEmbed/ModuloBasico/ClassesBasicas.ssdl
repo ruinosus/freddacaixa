@@ -9,6 +9,7 @@
     <EntitySet Name="perfil" EntityType="FredDaCaixaModel.Store.perfil" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="video" EntityType="FredDaCaixaModel.Store.video" store:Type="Tables" Schema="thecase" />
     <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
       <End Role="galeria" EntitySet="galeria" />
       <End Role="foto" EntitySet="foto" />
@@ -97,6 +98,15 @@
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Login" Type="varchar" Nullable="false" MaxLength="100" />
     <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="video">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+    <Property Name="Titulo" Type="varchar" MaxLength="8000" />
   </EntityType>
   <Association Name="fk_Foto_Galeria">
     <End Role="galeria" Type="FredDaCaixaModel.Store.galeria" Multiplicity="1" />

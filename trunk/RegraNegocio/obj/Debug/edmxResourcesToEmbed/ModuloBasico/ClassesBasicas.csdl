@@ -13,6 +13,7 @@
     <EntitySet Name="Partido" EntityType="FredDaCaixaModel.Partido" />
     <EntitySet Name="Perfil" EntityType="FredDaCaixaModel.Perfil" />
     <EntitySet Name="Lider" EntityType="FredDaCaixaModel.Lider" />
+    <EntitySet Name="Video" EntityType="FredDaCaixaModel.Video" />
   </EntityContainer>
   <EntityType Name="Foto">
     <Key>
@@ -111,5 +112,14 @@
     <Property Type="String" Name="Rg" />
     <Property Type="String" Name="Telefone1" />
     <Property Type="String" Name="Telefone2" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="Corpo" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SubTitulo" />
+    <Property Type="String" Name="Titulo" />
   </EntityType>
 </Schema>

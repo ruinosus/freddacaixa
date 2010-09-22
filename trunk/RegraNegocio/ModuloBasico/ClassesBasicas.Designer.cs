@@ -197,6 +197,22 @@ namespace RegraNegocio.ModuloBasico
             }
         }
         private ObjectSet<Lider> _Lider;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Video> Video
+        {
+            get
+            {
+                if ((_Video == null))
+                {
+                    _Video = base.CreateObjectSet<Video>("Video");
+                }
+                return _Video;
+            }
+        }
+        private ObjectSet<Video> _Video;
 
         #endregion
         #region AddTo Methods
@@ -263,6 +279,14 @@ namespace RegraNegocio.ModuloBasico
         public void AddToLider(Lider lider)
         {
             base.AddObject("Lider", lider);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Video EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToVideo(Video video)
+        {
+            base.AddObject("Video", video);
         }
 
         #endregion
@@ -1644,6 +1668,133 @@ namespace RegraNegocio.ModuloBasico
         private global::System.String _Senha;
         partial void OnSenhaChanging(global::System.String value);
         partial void OnSenhaChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="FredDaCaixaModel", Name="Video")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Video : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Video object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static Video CreateVideo(global::System.Int32 id)
+        {
+            Video video = new Video();
+            video.ID = id;
+            return video;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Corpo
+        {
+            get
+            {
+                return _Corpo;
+            }
+            set
+            {
+                OnCorpoChanging(value);
+                ReportPropertyChanging("Corpo");
+                _Corpo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Corpo");
+                OnCorpoChanged();
+            }
+        }
+        private global::System.String _Corpo;
+        partial void OnCorpoChanging(global::System.String value);
+        partial void OnCorpoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SubTitulo
+        {
+            get
+            {
+                return _SubTitulo;
+            }
+            set
+            {
+                OnSubTituloChanging(value);
+                ReportPropertyChanging("SubTitulo");
+                _SubTitulo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("SubTitulo");
+                OnSubTituloChanged();
+            }
+        }
+        private global::System.String _SubTitulo;
+        partial void OnSubTituloChanging(global::System.String value);
+        partial void OnSubTituloChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Titulo
+        {
+            get
+            {
+                return _Titulo;
+            }
+            set
+            {
+                OnTituloChanging(value);
+                ReportPropertyChanging("Titulo");
+                _Titulo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Titulo");
+                OnTituloChanged();
+            }
+        }
+        private global::System.String _Titulo;
+        partial void OnTituloChanging(global::System.String value);
+        partial void OnTituloChanged();
 
         #endregion
     

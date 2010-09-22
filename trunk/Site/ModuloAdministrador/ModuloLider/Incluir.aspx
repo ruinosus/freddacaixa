@@ -87,6 +87,14 @@
                     <asp:ListItem>Tejucupapo</asp:ListItem>
                     <asp:ListItem>Timbauba</asp:ListItem>
                     <asp:ListItem>Carne de Vaca</asp:ListItem>
+                     <asp:ListItem>Condado</asp:ListItem>
+                     <asp:ListItem> Itaquitinga</asp:ListItem>
+                     <asp:ListItem> Aliança</asp:ListItem>
+                     <asp:ListItem> Nazaré</asp:ListItem>
+                     <asp:ListItem> Gambá</asp:ListItem>
+                     <asp:ListItem> São Loutenço</asp:ListItem>
+                     <asp:ListItem> Carne de vaca</asp:ListItem>
+                     <asp:ListItem> Barra de Catuama</asp:ListItem>
                 </asp:DropDownList>
 
             </td>

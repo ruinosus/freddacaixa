@@ -14,6 +14,7 @@
           <EntitySet Name="perfil" EntityType="FredDaCaixaModel.Store.perfil" store:Type="Tables" Schema="thecase" />
           <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="thecase" />
           <EntitySet Name="usuario" EntityType="FredDaCaixaModel.Store.usuario" store:Type="Tables" Schema="thecase" />
+          <EntitySet Name="video" EntityType="FredDaCaixaModel.Store.video" store:Type="Tables" Schema="thecase" />
           <AssociationSet Name="fk_Foto_Galeria" Association="FredDaCaixaModel.Store.fk_Foto_Galeria">
             <End Role="galeria" EntitySet="galeria" />
             <End Role="foto" EntitySet="foto" />
@@ -103,6 +104,15 @@
           <Property Name="Login" Type="varchar" Nullable="false" MaxLength="100" />
           <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="100" />
         </EntityType>
+        <EntityType Name="video">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Corpo" Type="varchar" MaxLength="10000" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubTitulo" Type="varchar" MaxLength="8000" />
+          <Property Name="Titulo" Type="varchar" MaxLength="8000" />
+        </EntityType>
         <Association Name="fk_Foto_Galeria">
           <End Role="galeria" Type="FredDaCaixaModel.Store.galeria" Multiplicity="1" />
           <End Role="foto" Type="FredDaCaixaModel.Store.foto" Multiplicity="*" />
@@ -132,6 +142,7 @@
           <EntitySet Name="Partido" EntityType="FredDaCaixaModel.Partido" />
           <EntitySet Name="Perfil" EntityType="FredDaCaixaModel.Perfil" />
           <EntitySet Name="Lider" EntityType="FredDaCaixaModel.Lider" />
+          <EntitySet Name="Video" EntityType="FredDaCaixaModel.Video" />
         </EntityContainer>
         <EntityType Name="Foto">
           <Key>
@@ -231,6 +242,15 @@
           <Property Type="String" Name="Telefone1" />
           <Property Type="String" Name="Telefone2" />
         </EntityType>
+        <EntityType Name="Video">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="Corpo" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SubTitulo" />
+          <Property Type="String" Name="Titulo" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -329,6 +349,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Video">
+            <EntityTypeMapping TypeName="FredDaCaixaModel.Video">
+              <MappingFragment StoreEntitySet="video">
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Corpo" ColumnName="Corpo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -362,6 +392,7 @@
         <EntityTypeShape EntityType="FredDaCaixaModel.Partido" Width="1.5" PointX="5.75" PointY="0.75" Height="1.5923063151041665" />
         <EntityTypeShape EntityType="FredDaCaixaModel.Perfil" Width="1.5" PointX="0.75" PointY="6.75" Height="1.5923063151041674" />
         <EntityTypeShape EntityType="FredDaCaixaModel.Lider" Width="1.5" PointX="3.375" PointY="6.75" Height="3.5644742838541674" />
+        <EntityTypeShape EntityType="FredDaCaixaModel.Video" Width="1.5" PointX="5.375" PointY="6.75" Height="1.5923063151041674" />
       </Diagram>
     </Diagrams>
   </Designer>
