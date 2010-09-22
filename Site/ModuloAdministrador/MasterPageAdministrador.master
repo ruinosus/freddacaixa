@@ -35,6 +35,8 @@
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Text="Lideres" NavigateUrl="~/ModuloAdministrador/ModuloLider/Consultar.aspx">
                                 </ig:DataMenuItem>
+                                <ig:DataMenuItem Text="Videos" NavigateUrl="~/ModuloAdministrador/ModuloVideo/Consultar.aspx">
+                                </ig:DataMenuItem>
                                 <ig:DataMenuItem IsSeparator="True" Text="[Separator]">
                                 </ig:DataMenuItem>
                                 <ig:DataMenuItem Key="Deslogar" Text="Deslogar" Value="Deslogar">

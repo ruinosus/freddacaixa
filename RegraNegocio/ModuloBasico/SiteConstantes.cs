@@ -42,6 +42,14 @@ namespace ModuloBasico
         public static readonly String PERFIL_ALTERADO = "Conteúdo do Perfil alterado com sucesso.";
         public static readonly String PERFIL_EXCLUIDO = "Conteúdo do Perfil excluido com sucesso.";
 
+        //Video
+        public static readonly String VIDEO_NAO_INCLUIDO = "Conteúdo do Video não incluído.";
+        public static readonly String VIDEO_NAO_ALTERADO = "Conteúdo do Video não alterado.";
+        public static readonly String VIDEO_NAO_EXCLUIDO = "Conteúdo do Video não excluido.";
+        public static readonly String VIDEO_INCLUIDO = "Conteúdo do Video incluído com sucesso.";
+        public static readonly String VIDEO_ALTERADO = "Conteúdo do Video alterado com sucesso.";
+        public static readonly String VIDEO_EXCLUIDO = "Conteúdo do Video excluido com sucesso.";
+
 
         //Proposta
         public static readonly String PROPOSTA_NAO_INCLUIDA = "Conteúdo da Proposta não incluído.";
