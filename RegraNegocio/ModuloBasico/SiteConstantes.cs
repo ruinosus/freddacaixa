@@ -50,6 +50,15 @@ namespace ModuloBasico
         public static readonly String VIDEO_ALTERADO = "Conteúdo do Video alterado com sucesso.";
         public static readonly String VIDEO_EXCLUIDO = "Conteúdo do Video excluido com sucesso.";
 
+        //Localidade
+        public static readonly String LOCALIDADE_NAO_INCLUIDO = "Conteúdo do Localidade não incluído.";
+        public static readonly String LOCALIDADE_NAO_ALTERADO = "Conteúdo do Localidade não alterado.";
+        public static readonly String LOCALIDADE_NAO_EXCLUIDO = "Conteúdo do Localidade não excluido.";
+        public static readonly String LOCALIDADE_INCLUIDO = "Conteúdo do Localidade incluído com sucesso.";
+        public static readonly String LOCALIDADE_ALTERADO = "Conteúdo do Localidade alterado com sucesso.";
+        public static readonly String LOCALIDADE_EXCLUIDO = "Conteúdo do Localidade excluido com sucesso.";
+
+
 
         //Proposta
         public static readonly String PROPOSTA_NAO_INCLUIDA = "Conteúdo da Proposta não incluído.";

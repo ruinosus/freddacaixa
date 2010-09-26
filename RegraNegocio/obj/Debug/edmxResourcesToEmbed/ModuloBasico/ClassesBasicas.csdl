@@ -14,6 +14,7 @@
     <EntitySet Name="Perfil" EntityType="FredDaCaixaModel.Perfil" />
     <EntitySet Name="Lider" EntityType="FredDaCaixaModel.Lider" />
     <EntitySet Name="Video" EntityType="FredDaCaixaModel.Video" />
+    <EntitySet Name="Localidades" EntityType="FredDaCaixaModel.Localidades" />
   </EntityContainer>
   <EntityType Name="Foto">
     <Key>
@@ -112,6 +113,9 @@
     <Property Type="String" Name="Rg" />
     <Property Type="String" Name="Telefone1" />
     <Property Type="String" Name="Telefone2" />
+    <Property Type="String" Name="Titulo" />
+    <Property Type="String" Name="Serie" />
+    <Property Type="String" Name="Zona" />
   </EntityType>
   <EntityType Name="Video">
     <Key>
@@ -121,5 +125,12 @@
     <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="SubTitulo" />
     <Property Type="String" Name="Titulo" />
+  </EntityType>
+  <EntityType Name="Localidades">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="Descricao" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
 </Schema>

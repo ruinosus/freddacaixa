@@ -56,6 +56,9 @@ namespace Repositorios
             liderAux.Rg = lider.Rg;
             liderAux.Telefone1 = lider.Telefone1;
             liderAux.Telefone2 = lider.Telefone2;
+            liderAux.Titulo = lider.Titulo;
+            liderAux.Serie = lider.Serie;
+            liderAux.Zona = lider.Zona;
 
         }
 
