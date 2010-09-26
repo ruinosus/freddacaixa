@@ -80,19 +80,7 @@
             </td>
             <td>
                 <asp:DropDownList runat="server" ID="cmbLocal">
-                    <asp:ListItem>Ponta de Pedras</asp:ListItem>
-                    <asp:ListItem>Goiana</asp:ListItem>
-                    <asp:ListItem>Tejucupapo</asp:ListItem>
-                    <asp:ListItem>Timbauba</asp:ListItem>
-                    <asp:ListItem>Carne de Vaca</asp:ListItem>
-                    <asp:ListItem>Condado</asp:ListItem>
-                    <asp:ListItem> Itaquitinga</asp:ListItem>
-                    <asp:ListItem> Aliança</asp:ListItem>
-                    <asp:ListItem> Nazaré</asp:ListItem>
-                    <asp:ListItem> Gambá</asp:ListItem>
-                    <asp:ListItem> São Loutenço</asp:ListItem>
-                    <asp:ListItem> Carne de vaca</asp:ListItem>
-                    <asp:ListItem> Barra de Catuama</asp:ListItem>
+                  
                 </asp:DropDownList>
             </td>
         </tr>
@@ -110,6 +98,30 @@
             </td>
             <td>
                 <asp:TextBox ID="txtRg" Width="700px" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblTitulo" runat="server" Text="Titulo:"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtTitulo" Width="700px"  runat="server"></asp:TextBox>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <asp:Label ID="lblSerie" runat="server" Text="Serie:"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtSerie" Width="700px"  runat="server"></asp:TextBox>
+            </td>
+        </tr>
+          <tr>
+            <td>
+                <asp:Label ID="lblZona" runat="server" Text="Zona:"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtZona" Width="700px"  runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>

@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\LocalidadesControlador.cs" />
+    <Compile Include="Controladores\Interfaces\ILocalidadesControlador.cs" />
     <Compile Include="Controladores\Interfaces\IVideoControlador.cs" />
     <Compile Include="Controladores\VideoControlador.cs" />
     <Compile Include="Controladores\LiderControlador.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Controladores\Interfaces\IUsuarioControlador.cs" />
     <Compile Include="Controladores\PropostaControlador.cs" />
     <Compile Include="Controladores\UsuarioControlador.cs" />
+    <Compile Include="Fabricas\LocalidadesFabrica.cs" />
     <Compile Include="Fabricas\VideoFabrica.cs" />
     <Compile Include="Fabricas\LiderFabrica.cs" />
     <Compile Include="Fabricas\PartidoFabrica.cs" />
@@ -84,6 +87,8 @@
     <Compile Include="ModuloBasico\Singleton.cs" />
     <Compile Include="ModuloBasico\SiteConstantes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\LocalidadesRepositorio.cs" />
+    <Compile Include="Repositorios\Interfaces\ILocalidadesRepositorio.cs" />
     <Compile Include="Repositorios\Interfaces\IVideolRepositorio.cs" />
     <Compile Include="Repositorios\VideoRepositorio.cs" />
     <Compile Include="Repositorios\LiderRepositorio.cs" />

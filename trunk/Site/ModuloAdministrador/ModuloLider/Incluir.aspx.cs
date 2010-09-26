@@ -13,6 +13,16 @@ public partial class ModuloAdministrador_ModuloLider_Incluir : System.Web.UI.Pag
     protected void Page_Load(object sender, EventArgs e)
     {
         ClasseAuxiliar.ValidarUsuarioLogado();
+        if (!IsPostBack)
+        {
+            ILocalidadesControlador contro = LocalidadesControlador.Instance;
+
+            cmbLocal.DataSource = contro.Consultar();
+
+            cmbLocal.DataValueField = "Descricao";
+            cmbLocal.DataTextField = "Descricao";
+            cmbLocal.DataBind();
+        }
     }
 
     protected void btnConfirmar_Click(object sender, EventArgs e)
@@ -37,6 +47,9 @@ public partial class ModuloAdministrador_ModuloLider_Incluir : System.Web.UI.Pag
             lider.Rg = txtRg.Text;
             lider.Telefone1 = txtTelefone1.Text;
             lider.Telefone2 = txtTelefone2.Text;
+            lider.Titulo = txtTitulo.Text;
+            lider.Serie = txtSerie.Text;
+            lider.Zona = txtZona.Text;
             controlador.Incluir(lider);
             cvaAvisoDeInformacao.ErrorMessage = SiteConstantes.LIDER_INCLUIDO;
             cvaAvisoDeInformacao.IsValid = false;

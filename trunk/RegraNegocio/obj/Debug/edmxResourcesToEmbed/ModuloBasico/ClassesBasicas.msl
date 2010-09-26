@@ -74,6 +74,9 @@
     <EntitySetMapping Name="Lider">
       <EntityTypeMapping TypeName="FredDaCaixaModel.Lider">
         <MappingFragment StoreEntitySet="lider">
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
           <ScalarProperty Name="Telefone2" ColumnName="Telefone2" />
           <ScalarProperty Name="Telefone1" ColumnName="Telefone1" />
           <ScalarProperty Name="Rg" ColumnName="Rg" />
@@ -100,6 +103,14 @@
           <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Corpo" ColumnName="Corpo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidades">
+      <EntityTypeMapping TypeName="FredDaCaixaModel.Localidades">
+        <MappingFragment StoreEntitySet="localidades">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

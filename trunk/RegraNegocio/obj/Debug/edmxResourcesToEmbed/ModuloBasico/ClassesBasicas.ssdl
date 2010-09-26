@@ -5,6 +5,7 @@
     <EntitySet Name="galeria" EntityType="FredDaCaixaModel.Store.galeria" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="index" EntityType="FredDaCaixaModel.Store.index" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="lider" EntityType="FredDaCaixaModel.Store.lider" store:Type="Tables" Schema="thecase" />
+    <EntitySet Name="localidades" EntityType="FredDaCaixaModel.Store.localidades" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="partido" EntityType="FredDaCaixaModel.Store.partido" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="perfil" EntityType="FredDaCaixaModel.Store.perfil" store:Type="Tables" Schema="thecase" />
     <EntitySet Name="proposta" EntityType="FredDaCaixaModel.Store.proposta" store:Type="Tables" Schema="thecase" />
@@ -61,8 +62,18 @@
     <Property Name="Numero" Type="varchar" MaxLength="45" />
     <Property Name="Obs" Type="varchar" MaxLength="8000" />
     <Property Name="Rg" Type="varchar" MaxLength="45" />
+    <Property Name="Serie" Type="varchar" MaxLength="45" />
     <Property Name="Telefone1" Type="varchar" MaxLength="45" />
     <Property Name="Telefone2" Type="varchar" MaxLength="45" />
+    <Property Name="Titulo" Type="varchar" MaxLength="100" />
+    <Property Name="Zona" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="localidades">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Descricao" Type="varchar" MaxLength="100" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="partido">
     <Key>

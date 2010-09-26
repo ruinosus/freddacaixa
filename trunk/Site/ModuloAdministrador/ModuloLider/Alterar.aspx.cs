@@ -13,9 +13,16 @@ public partial class ModuloAdministrador_ModuloLider_Alterar : System.Web.UI.Pag
     protected void Page_Load(object sender, EventArgs e)
     {
         ClasseAuxiliar.ValidarUsuarioLogado();
+
         if (!IsPostBack)
         {
+            ILocalidadesControlador contro = LocalidadesControlador.Instance;
 
+            cmbLocal.DataSource = contro.Consultar();
+
+            cmbLocal.DataValueField = "Descricao";
+            cmbLocal.DataTextField = "Descricao";
+            cmbLocal.DataBind();
             LimparCampos();
             CarregarDados();
         }
@@ -46,7 +53,9 @@ public partial class ModuloAdministrador_ModuloLider_Alterar : System.Web.UI.Pag
             txtRg.Text = lider.Rg;
             txtTelefone1.Text = lider.Telefone1;
             txtTelefone2.Text = lider.Telefone2;
-           
+            txtTitulo.Text = lider.Titulo;
+            txtSerie.Text = lider.Serie;
+            txtZona.Text = lider.Zona;
 
         }
     }
@@ -77,8 +86,9 @@ public partial class ModuloAdministrador_ModuloLider_Alterar : System.Web.UI.Pag
             lider.Rg = txtRg.Text;
             lider.Telefone1 = txtTelefone1.Text;
             lider.Telefone2 = txtTelefone2.Text;
-
-
+            lider.Titulo = txtTitulo.Text;
+            lider.Serie = txtSerie.Text;
+            lider.Zona = txtZona.Text;
             controlador.Alterar(lider);
 
             cvaAvisoDeInformacao.ErrorMessage = SiteConstantes.LIDER_ALTERADO;
@@ -120,6 +130,7 @@ public partial class ModuloAdministrador_ModuloLider_Alterar : System.Web.UI.Pag
         txtRg.Text = string.Empty;
         txtTelefone1.Text = string.Empty;
         txtTelefone2.Text = string.Empty;
+        txtTitulo.Text = string.Empty;
 
 
     }
